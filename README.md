@@ -54,7 +54,7 @@ POST localhost:8080/v1/game/{gameId}/bowler
 
 ### 3. Bowl the game
 ```
-POST http://localhost:8080/v1/game/1/bowler/2/shot
+POST http://localhost:8080/v1/game/{gameId}/bowler/{bowlerId}/shot
 
 {
 "pins": [1-10]
@@ -62,7 +62,7 @@ POST http://localhost:8080/v1/game/1/bowler/2/shot
 ``` 
 
 ### 4. Check the score anytime
-```GET /v1/game/1/scorecards```
+```GET /v1/game/{gameId}/scorecards```
 
 ### Get information about system health, configurations, etc.
 
