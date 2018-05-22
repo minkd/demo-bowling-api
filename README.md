@@ -32,7 +32,37 @@ The application is built using the Spring Boot Web default port of 8080, which i
 
 ## About the Service
 
-The service is a RESTful API which provides routes to appropriate & configure a bowling game. 
+The service is a RESTful API which provides routes to appropriate & configure a bowling game.
+
+## Usage
+
+### 1. Create game
+```
+POST localhost:8080/v1/game 
+{
+"name": "test", "lane": 2
+}
+``` 
+
+### 2. Add bowler to game
+```
+POST localhost:8080/v1/game/{gameId}/bowler 
+{
+"name": "John Doe"
+}
+``` 
+
+### 3. Bowl the game
+```
+POST http://localhost:8080/v1/game/1/bowler/2/shot
+
+{
+"pins": [1-10]
+}
+``` 
+
+### 4. Check the score anytime
+```GET /v1/game/1/scorecards```
 
 ### Get information about system health, configurations, etc.
 
