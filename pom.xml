@@ -87,10 +87,22 @@
     </dependencies>
 
 	<build>
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>-exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
             <!-- Pluging for processing Java classpath components with maven -->

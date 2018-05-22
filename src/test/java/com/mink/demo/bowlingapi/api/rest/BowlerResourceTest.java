@@ -22,7 +22,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
-import java.util.Arrays;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -70,7 +69,7 @@ public class BowlerResourceTest {
 
         // Make request
         MockHttpServletResponse response = mvc.perform(
-                get("/game/1/bowler")
+                get("/v1/game/1/bowler")
                         .accept(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .getResponse();
@@ -94,7 +93,7 @@ public class BowlerResourceTest {
 
         // Make request
         MockHttpServletResponse response = mvc.perform(
-                post("/game/1/bowler")
+                post("/v1/game/1/bowler")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(testBowlerResponse)))
                 .andReturn()
@@ -118,7 +117,7 @@ public class BowlerResourceTest {
 
         // Make request
         MockHttpServletResponse response = mvc.perform(
-                get("/game/1/bowler/2")
+                get("/v1/game/1/bowler/2")
                         .accept(MediaType.APPLICATION_JSON))
                 .andReturn()
                 .getResponse();
@@ -136,7 +135,7 @@ public class BowlerResourceTest {
 
         // Make request
         MockHttpServletResponse response = mvc.perform(
-                delete("/game/1/bowler/2" + testBowlerResponse.getId())
+                delete("/v1/game/1/bowler/2")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(JsonUtil.toJson(testBowlerResponse)))
                 .andReturn()

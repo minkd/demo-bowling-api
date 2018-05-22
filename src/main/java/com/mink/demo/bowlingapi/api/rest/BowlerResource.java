@@ -22,7 +22,7 @@ import javax.validation.Valid;
 import java.util.Set;
 
 @RestController
-@RequestMapping(path = {"/game/{gameId}"}, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = {"/v1/game/{gameId}"}, produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(tags = "Bowlers", description = "Operations to manage Bowlers")
 public class BowlerResource {
 
