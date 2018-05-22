@@ -1,4 +1,4 @@
-# Coupon Configuration Service
+# Bowling Service
 
 This is a Java Spring Boot application (version 2.0.2). The purpose of this service is to demo a bowling api. This project uses the spring boot actuator for production metrics and distributed tracing.
 
