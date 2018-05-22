@@ -77,6 +77,8 @@ specific responsibilities:
     - Middleman between the model and the resource using Mappers
     - Implements mappers to convert data recieved from the model into DTO objects which can be serialized and used for 
     external API interaction
+3. Model
+    - Handles database entities, access, and validation
 
 ## Questions and Comments: 
 
